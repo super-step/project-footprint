@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>전체 지도 구현</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+        padding: 16px;
+
+        display: inline-block;
+      }
+      div {
+        border: 0px solid #000;
+      }
+      .whole_map {
+        position: relative;
+      }
+      .parts_map {
+        position: absolute;
+      }
+      .parts_map img {
+        opacity: 0.1;
+      }
+      .parts_map a:hover {
+        opacity: 1;
+      }
+      .btn {
+        opacity: 0.5;
+        position: absolute;
+        font-size: 10px;
+        text-align: center;
+      }
+      .jn {
+        top: 348px;
+        left: 28px;
+      }
+      .jn_btn {
+        width: 100px;
+        height: 80px;
+        top: 30px;
+        left: 50px;
+      }
+      .jb {
+        top: 278px;
+        left: 88px;
+      }
+      .jb_btn {
+        width: 100px;
+        height: 70px;
+        top: 20px;
+        left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="whole_map">
+      <img src="image\map\전국지도.png" width="488px" />
+      <div class="parts_map jn">
+        <img class="img" src="image\map\전라남도.png" width="184px" />
+        <a class="jn_btn btn" href="">전남</a>
+      </div>
+      <div class="parts_map jb">
+        <img src="image\map\전라북도.png" width="141px" />
+        <a class="jb_btn btn" href="https://naver.com">전북</a>
+      </div>
+      <div class="parts_map gj">
+        <img src="image\map\광주.png" width="43px" />
+        <a class="gj_btn btn" href="https://naver.com">광주</a>
+      </div>
+    </div>
+  </body>
+</html>
