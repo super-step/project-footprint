@@ -1,13 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
-
 body {
-  font-family: 'Noto Sans KR', sans-serif;
-  line-height: 1.5em;
   margin: 0;
-  background-color: #FAF4C0;
-  font-weight: 300;
+  padding: 0;
   height: 100vh;
-  color: #222;
+  width: 100vw;
+  background: url("project_V3_main/image/image/background_img_16-9.jpg")
+    no-repeat center;
+  background-size: cover;
 }
 a {
   text-decoration: none;
@@ -19,7 +17,7 @@ header img {
   position: relative;
   position: fixed;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  background-color: #FAF4C0;
+  background-color: #faf4c0;
   border-radius: 30%;
   z-index: 2;
   margin: 7px;
@@ -35,11 +33,11 @@ header img {
 }
 /* Trigger Button */
 
-input[id=cyy_ham_trigger] {
+input[id="cyy_ham_trigger"] {
   display: none;
 }
 
-label[for=cyy_ham_trigger] {
+label[for="cyy_ham_trigger"] {
   /*border: 1px solid red;*/
   z-index: 2;
   top: 30px;
@@ -51,44 +49,46 @@ label[for=cyy_ham_trigger] {
   cursor: pointer;
 }
 
-label[for=cyy_ham_trigger] span {
+label[for="cyy_ham_trigger"] span {
   position: absolute;
   height: 3px;
-  background-color: #E70B35;
+  background-color: rgb(163, 163, 163);
   width: 100%;
   left: 0;
   transition: 0.3s;
-  
 }
 
-
-label[for=cyy_ham_trigger] span:nth-child(1) {
+label[for="cyy_ham_trigger"] span:nth-child(1) {
   top: 0;
 }
-label[for=cyy_ham_trigger] span:nth-child(2) {
+label[for="cyy_ham_trigger"] span:nth-child(2) {
   top: 50%;
 }
-label[for=cyy_ham_trigger] span:nth-child(3) {
+label[for="cyy_ham_trigger"] span:nth-child(3) {
   top: 100%;
 }
 
-input[id=cyy_ham_trigger]:checked + label[for=cyy_ham_trigger] span {
-  background-color: #E70B35;
+input[id="cyy_ham_trigger"]:checked + label[for="cyy_ham_trigger"] span {
+  background-color: #e70b35;
 }
 
-input[id=cyy_ham_trigger]:checked + label[for=cyy_ham_trigger] span:nth-child(1) {
+input[id="cyy_ham_trigger"]:checked
+  + label[for="cyy_ham_trigger"]
+  span:nth-child(1) {
   top: 50%;
   transform: rotate(45deg);
 }
-input[id=cyy_ham_trigger]:checked + label[for=cyy_ham_trigger] span:nth-child(2) {
+input[id="cyy_ham_trigger"]:checked
+  + label[for="cyy_ham_trigger"]
+  span:nth-child(2) {
   opacity: 0;
 }
-input[id=cyy_ham_trigger]:checked + label[for=cyy_ham_trigger] span:nth-child(3) {
+input[id="cyy_ham_trigger"]:checked
+  + label[for="cyy_ham_trigger"]
+  span:nth-child(3) {
   top: 50%;
   transform: rotate(-45deg);
 }
-
-
 
 /* 네비게이션 구역 */
 
@@ -99,7 +99,7 @@ input[id=cyy_ham_trigger]:checked + label[for=cyy_ham_trigger] span:nth-child(3)
   padding-right: 100px;
   top: -150px;
   right: 0;
-  background-color: #007996;
+
   padding: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding-bottom: 10px;
@@ -135,8 +135,7 @@ input[id=cyy_ham_trigger]:checked + label[for=cyy_ham_trigger] span:nth-child(3)
   top: 100%;
   left: 0;
   color: #000;
-  background-color: #FAF4C0;
-
+  background-color: #faf4c0;
 }
 .cyy_nav a:hover:before {
   top: -100%;
@@ -145,16 +144,11 @@ input[id=cyy_ham_trigger]:checked + label[for=cyy_ham_trigger] span:nth-child(3)
   top: 0;
 }
 
-input[id=cyy_ham_trigger]:checked ~ .cyy_nav {
+input[id="cyy_ham_trigger"]:checked ~ .cyy_nav {
   top: 0;
 }
 
-
-
-
-
 /* 본문 */
-
 
 section {
   position: relative;
@@ -193,4 +187,3 @@ article {
   top: 200px;
   left: 370px;
 }
-

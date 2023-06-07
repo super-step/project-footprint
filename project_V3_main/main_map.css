@@ -1,5 +1,5 @@
 .map_container {
-  border: 7px solid #01B6E1;
+  border: 7px solid #01b6e1;
   background-color: #fff;
   right: 100px;
 }
@@ -28,7 +28,7 @@
   border: 1px solid #000;
   width: 100px;
   height: 50px;
-  top : 75%;
+  top: 75%;
   left: 25%;
 }
 .gj_map img {
@@ -40,6 +40,7 @@
   width: 25.4%;
   top: 53.5%;
   left: 22.6%;
+  filter: brightness(10);
 }
 .cn_map img {
   width: 24.5%;
@@ -71,7 +72,6 @@
   top: 65%;
   left: 64.2%;
 }
-
 
 .whole_map div a:hover ~ img {
   background-color: #000;
