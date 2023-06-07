@@ -1,19 +1,38 @@
+/* 본문 */
+
+section {
+  position: relative;
+  top: 120px;
+  display: flex;
+  z-index: -1;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+article {
+  position: absolute;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-basis: 800px;
+  height: 800px;
+}
 .map_container {
   border: 7px solid #01b6e1;
   background-color: #fff;
   right: 100px;
 }
-.whole_map img {
+.map_container img {
   position: relative;
   top: 20px;
   left: 50px;
   width: 700px;
 }
-.whole_map div a {
+.map_container div a {
   z-index: 2;
 }
 
-.whole_map div img {
+.map_container div img {
   position: absolute;
   opacity: 30%;
   z-index: 1;
