@@ -35,39 +35,125 @@
         </div>
       </article>
       <article class="main_map_container">
-        <input type="radio" name="tabmenu" id="map_whole" checked />
-        <input type="radio" name="tabmenu" id="map_gj" />
+        <input type="radio" name="tabmenu" id="tab1" checked />
+        <input type="radio" name="tabmenu" id="tab2" />
         <input type="radio" name="tabmenu" id="tab3" />
-        <div class="tabs">
-          <div class="items">
-            <div class="map_whole_img">
-              <img
-                src="\project_V6_main\image\map\전국지도.png"
-                usemap="#image-map"
-              />
-              <div>
-                <img src="\project_V5_main\image\map\전라남도.png" alt="" />
-                <img src="\project_V5_main\image\map\광주.png" alt="" />
+        <div class="main_tabs">
+          <div class="main_items">
+            <div class="map_whole_img main_item">
+              <div class="map_container">
+                <img
+                  src="\project_V6_main\image\map\전국지도.png"
+                  usemap="#image-map"
+                />
+                <img
+                  src="\project_V5_main\image\map\전라남도.png"
+                  alt=""
+                  id="map_jn"
+                />
+                <img
+                  src="\project_V5_main\image\map\광주.png"
+                  alt=""
+                  id="map_gj"
+                />
+                <img
+                  src="\project_V5_main\image\map\전라북도.png"
+                  alt=""
+                  id="map_jb"
+                />
+                <img
+                  src="\project_V5_main\image\map\충청남도.png"
+                  alt=""
+                  id="map_cn"
+                />
+                <img
+                  src="\project_V5_main\image\map\대전.png"
+                  alt=""
+                  id="map_dj"
+                />
+                <img
+                  src="\project_V5_main\image\map\세종.png"
+                  alt=""
+                  id="map_sj"
+                />
+                <img
+                  src="\project_V5_main\image\map\충청북도.png"
+                  alt=""
+                  id="map_cb"
+                />
+                <img
+                  src="\project_V5_main\image\map\경상남도.png"
+                  alt=""
+                  id="map_gn"
+                />
+                <img
+                  src="\project_V5_main\image\map\부산.png"
+                  alt=""
+                  id="map_bs"
+                />
+                <img
+                  src="\project_V5_main\image\map\대구.png"
+                  alt=""
+                  id="map_dg"
+                />
+                <img
+                  src="\project_V5_main\image\map\경상북도.png"
+                  alt=""
+                  id="map_gb"
+                />
+                <img
+                  src="\project_V5_main\image\map\울산.png"
+                  alt=""
+                  id="map_us"
+                />
+                <img
+                  src="\project_V5_main\image\map\경기도.png"
+                  alt=""
+                  id="map_gg"
+                />
+                <img
+                  src="\project_V5_main\image\map\서울.png"
+                  alt=""
+                  id="map_su"
+                />
+                <img
+                  src="\project_V5_main\image\map\인천.png"
+                  alt=""
+                  id="map_ic"
+                />
+                <img
+                  src="\project_V5_main\image\map\강원도.png"
+                  alt=""
+                  id="map_go"
+                />
+                <img
+                  src="\project_V5_main\image\map\제주도.png"
+                  alt=""
+                  id="map_jj"
+                />
               </div>
+              <!-- <span class="map_detail">
+                sfafsafsafsdfsafsd
+              </span> -->
             </div>
-            <div class="map_jn_img"></div>
-            <div class="map_gj_img"></div>
+            <div class="map_jn_img main_item">sfsafs</div>
+            <div class="map_gj_img main_item">asfdasdf</div>
           </div>
         </div>
-        <div class="btn">
-          <label for="map_whole"></label>
-          <label for="map_gj"></label>
+        <div class="main_btn">
+          <label for="tab1"></label>
+          <label for="tab2"></label>
           <label for="tab3"></label>
         </div>
-
         <map name="image-map">
           <area
-            href=""
+            href="#gj_map"
             target=""
             alt="gj_map"
             title="gj_map"
             coords="223,622,192,617,177,623,172,641,194,653,219,655,233,646,238,632"
             shape="poly"
+            href=""
           />
           <area
             target=""
@@ -75,15 +161,16 @@
             title="jn_map"
             coords="187,614,172,624,169,640,191,655,217,659,234,648,241,631,226,620,192,613,183,601,194,586,212,586,223,596,234,588,237,611,279,616,296,608,310,622,318,645,334,679,321,691,309,692,335,705,336,751,301,741,294,700,278,710,274,724,290,747,258,771,254,763,237,752,263,722,238,724,213,742,204,763,201,782,197,821,186,817,156,821,135,813,142,784,131,742,118,765,94,773,79,759,113,735,77,735,54,699,73,673,95,651,83,638,124,622,146,582,165,609,182,601"
             shape="poly"
-            for="tap3"
+            for="map_jn"
+            href="#jn_map"
           />
           <area
             target=""
             alt="jb_map"
             title="jb_map"
-            href=""
             coords="150,580,165,601,189,590,199,578,222,585,237,582,242,607,276,612,296,602,312,613,321,599,318,577,335,531,368,508,363,493,337,491,299,494,287,474,253,476,245,466,226,464,221,481,177,490,183,505,216,501,196,514,183,527,159,550,190,565,167,569"
             shape="poly"
+            href=""
           />
           <area
             target=""
