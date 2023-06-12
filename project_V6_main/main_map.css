@@ -22,7 +22,7 @@ article {
   margin: 11em auto;
 }
 .main_to_map img {
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   width: 60px;
   cursor: pointer;
   -webkit-filter: brightness(0) invert(1);
@@ -72,10 +72,8 @@ input[name="tabmenu"] {
 
 .map_container img[id="map_jn"] {
   width: 37.6%;
-  /* top: 67.7%; */
-  top: 0;
-  /* left: 5.7%; */
-  left: 0;
+  top: 67.7%;
+  left: 5.7%;
 }
 .map_container img[id="map_gj"] {
   width: 8.675%;
