@@ -72,8 +72,10 @@ input[name="tabmenu"] {
 
 .map_container img[id="map_jn"] {
   width: 37.6%;
-  top: 67.7%;
-  left: 5.7%;
+  /* top: 67.7%; */
+  top: 0;
+  /* left: 5.7%; */
+  left: 0;
 }
 .map_container img[id="map_gj"] {
   width: 8.675%;
