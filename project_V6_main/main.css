@@ -24,8 +24,7 @@ body::before {
   top: 0;
   height: 100%;
   width: 100%;
-  background: url(../project_V4_main/image/image/background_img_16-9.jpg)
-    no-repeat center fixed;
+  background: url(./image/image/background_img_16-9.jpg) no-repeat center fixed;
   background-attachment: fixed;
   background-size: cover;
   opacity: 1;

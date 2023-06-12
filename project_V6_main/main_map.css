@@ -22,7 +22,7 @@ article {
   margin: 11em auto;
 }
 .main_to_map img {
-  margin-top: 11rem;
+  margin-top: 5rem;
   width: 60px;
   cursor: pointer;
   -webkit-filter: brightness(0) invert(1);
