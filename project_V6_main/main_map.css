@@ -55,10 +55,10 @@ input[name="tabmenu"] {
 }
 .map_whole_img {
   display: inline-block;
+  background-color: rgba(0, 0, 0, 0.267);
 }
 .map_container {
   position: relative;
-  background-color: #494949;
 }
 .map_container img {
   position: absolute;
