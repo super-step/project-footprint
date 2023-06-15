@@ -55,7 +55,7 @@ input[name="tabmenu"] {
 }
 .map_whole_img {
   display: inline-block;
-  background-color: rgba(0, 0, 0, 0.267);
+  background-color: rgba(116, 116, 116, 0.267);
 }
 .map_container {
   position: relative;
@@ -71,7 +71,10 @@ input[name="tabmenu"] {
   filter: brightness(0) invert(1);
 }
 .map_container img[id] {
-  opacity: 0;
+  opacity: 0.5;
+  transition: 0.5s;
+  filter: invert(66%) sepia(15%) saturate(1745%) hue-rotate(124deg)
+    brightness(89%) contrast(99%);
 }
 .map_container img[id="map_jn"] {
   width: 37.6%;
@@ -188,4 +191,7 @@ input[id="tab1"]:checked ~ .main_btn label[for="tab1"],
 input[id="tab2"]:checked ~ .main_btn label[for="tab2"],
 input[id="tab3"]:checked ~ .main_btn label[for="tab3"] {
   background-color: #000;
+}
+map area[title="gj_map"] {
+  border: 1px solid #ffffff;
 }

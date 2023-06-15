@@ -1,21 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
   const gj_map = document.querySelector("area[title='gj_map']");
-  const main_intro = document.querySelector(".main_intro");
-  main_intro.addEventListener("mouseenter", (main_intro.style.color = "red"));
+  const jn_map = document.querySelector("area[title='jn_map']");
+  const gj_img = document.querySelector(".map_container img[id='map_gj']");
+  const jn_img = document.querySelector(".map_container img[id='map_jn']");
+  gj_map.addEventListener("mouseover", () => {
+    gj_img.style.opacity = 1;
+  });
+  gj_map.addEventListener("mouseout", () => {
+    gj_img.style.opacity = 0.5;
+  });
+  jn_map.addEventListener("mouseover", () => {
+    jn_img.style.opacity = 1;
+  });
+  jn_map.addEventListener("mouseout", () => {
+    jn_img.style.opacity = 0.5;
+  });
 });
-
-// if ($('#location-map')) {
-//   $('#location-map area').each(function() {
-//     var id = $(this).attr('id');
-//     $(this).mouseover(function() {
-//       $('#overlay' + id).show();
-
-//     });
-
-//     $(this).mouseout(function() {
-//       var id = $(this).attr('id');
-//       $('#overlay' + id).hide();
-//     });
-
-//   });
-// }
