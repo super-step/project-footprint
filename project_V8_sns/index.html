@@ -34,7 +34,7 @@
         </ul>
       </article>
       <article class="sns_container">
-        <div class="sns_map"></div>
+        <div class="sns_map" width="580px"></div>
         <div class="sns_contents">
           <div class="sns_post">
             <div class="sns_post_pic">
@@ -87,6 +87,7 @@
       	center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
       	level: 3 //지도의 레벨(확대, 축소 정도)
       };
+      var map = new kakao.maps.Map(container, options);
     </script>
   </body>
 </html>
