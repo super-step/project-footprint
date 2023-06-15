@@ -64,7 +64,9 @@ div.sns_post {
 }
 div.sns_post_pic {
   overflow: hidden;
+  display: flex;
   /* border: 1px solid #000000; */
+  align-items: center;
   margin: 10px 15px;
   width: 210px;
   height: 280px;
@@ -79,7 +81,7 @@ div.sns_post_profile {
   position: relative;
   overflow: hidden;
   display: inline-block;
-  background-color: #803c3c;
+  /* background-color: #803c3c; */
   /* border: 1px solid #000; */
   border-radius: 50%;
   width: 40px;
@@ -97,7 +99,7 @@ div.sns_post_title {
   position: relative;
   display: inline-block;
   /* border: 1px solid #000; */
-  background-color: #a3a3a3;
+  /* background-color: #e6e6e6; */
   width: 159px;
   height: 40px;
   margin-right: 15px;
