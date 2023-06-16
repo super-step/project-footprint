@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./main.css" />
     <link rel="stylesheet" href="./API.css" />
+    <script
+      src="./data/광주_관광지_데이터.json"
+      type="text/javascript"
+    ></script>
     <title>여행발자국</title>
   </head>
   <body>
@@ -34,7 +38,12 @@
           <li class="API_nav_item">발자국 식당</li>
         </ul>
       </article>
-      <article class="API_map">지도</article>
+      <article class="API_map">
+        <script
+          type="text/javascript"
+          src="//dapi.kakao.com/v2/maps/sdk.js?appkey=37962b2a8c893984a4d2139de5dc0061"
+        ></script>
+      </article>
       <article class="API_course">
         <div class="API_course_create">여행코스 생성</div>
       </article>
@@ -42,9 +51,6 @@
     <footer>
       <p>CopyRight &copy; dbsdudsw@icloud.com</p>
     </footer>
+    <script src="./js/map.js"></script>
   </body>
-  <script>
-    const gj_map = document.querySelector('map area[target="gj_map"] ');
-    const items = document.querySelector(".items");
-  </script>
 </html>
