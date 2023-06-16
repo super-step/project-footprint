@@ -6,71 +6,15 @@ var options = {
 
 var map = new kakao.maps.Map(container, options);
 
-let positions = JSON.parse(JSON.stringify(TestFile));
+let positions = JSON.parse(JSON.stringify(TestFile)).gj;
 
-console.log(positions);
-console.log(positions.gj);
-// var loca = [
-//   {
-//     name: "무등산 주상절리대",
-//     Latitude: 35.1200598333,
-//     longitude: 126.9989650099,
-//   },
-//   {
-//     name: "중외공원",
-//     Latitude: 35.1814981787,
-//     longitude: 126.8842958259,
-//   },
-//   {
-//     name: "사직공원(광주)",
-//     Latitude: 35.1413559608,
-//     longitude: 126.9121749221,
-//   },
-//   {
-//     name: "광주호",
-//     Latitude: 35.1851523796,
-//     longitude: 126.9927528112,
-//   },
-//   {
-//     name: "약사암(광주)",
-//     Latitude: 35.1223174593,
-//     longitude: 126.9722478684,
-//   },
-//   {
-//     name: "원효사",
-//     Latitude: 35.1486258304,
-//     longitude: 126.9857793462,
-//   },
-//   {
-//     name: "증심사(광주)",
-//     Latitude: 35.1287583574,
-//     longitude: 126.9697618157,
-//   },
-//   {
-//     name: "충장사",
-//     Latitude: 35.1625602481,
-//     longitude: 126.9787157312,
-//   },
-//   {
-//     name: "포충사",
-//     Latitude: 35.0898468165,
-//     longitude: 126.8487457033,
-//   },
-//   {
-//     name: "충민사",
-//     Latitude: 35.1519696177,
-//     longitude: 126.9692640546,
-//   },
-// ];
-
-// console.log(loca);
 // 마커 이미지의 이미지 주소입니다
 var imageSrc =
   "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
 
 // var imageSrc = "./image/icon/down-arrow.png";
 
-for (var i = 0; i < positions.gj.length; i++) {
+for (var i = 0; i < positions.length; i++) {
   // 마커 이미지의 이미지 크기 입니다
   var imageSize = new kakao.maps.Size(24, 35);
 
@@ -81,10 +25,37 @@ for (var i = 0; i < positions.gj.length; i++) {
   var marker = new kakao.maps.Marker({
     map: map, // 마커를 표시할 지도
     position: new kakao.maps.LatLng(
-      positions.gj[i].Latitude,
-      positions.gj[i].longitude
+      positions[i].Latitude,
+      positions[i].longitude
     ), // 마커를 표시할 위치
-    title: positions.gj[i].name, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
     image: markerImage, // 마커 이미지
   });
+
+  // 마커에 표시할 인포윈도우를 생성합니다
+  var infowindow = new kakao.maps.InfoWindow({
+    content: `<div>${positions[i].name}</div>`, // 인포윈도우에 표시할 내용
+  });
+
+  // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+  // 이벤트 리스너로는 클로저를 만들어 등록합니다
+  // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+  kakao.maps.event.addListener(
+    marker,
+    "mouseover",
+    makeOverListener(map, marker, infowindow)
+  );
+  kakao.maps.event.addListener(marker, "mouseout", makeOutListener(infowindow));
+}
+// 인포윈도우를 표시하는 클로저를 만드는 함수입니다
+function makeOverListener(map, marker, infowindow) {
+  return function () {
+    infowindow.open(map, marker);
+  };
+}
+
+// 인포윈도우를 닫는 클로저를 만드는 함수입니다
+function makeOutListener(infowindow) {
+  return function () {
+    infowindow.close();
+  };
 }
