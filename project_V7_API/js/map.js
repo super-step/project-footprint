@@ -7,15 +7,18 @@ var options = {
 var map = new kakao.maps.Map(container, options);
 
 var positions = fetch("./data/gj_map_data.json");
+let names = [];
 let Latitude = [];
 let longitude = [];
 positions
   .then((data) => data.json())
   .then((obj) => {
+    names.push(obj.name);
     Latitude.push(obj.Latitude);
     longitude.push(obj.longitude);
+    console.log();
   });
-console.log(positions);
+console.log(names);
 
 // var loca = [
 //   {
