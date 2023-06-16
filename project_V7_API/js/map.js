@@ -7,7 +7,14 @@ var options = {
 
 var map = new kakao.maps.Map(container, options);
 
-var positions = [
+var positions = fetch("./data/광주_관광지_데이터.json");
+positions
+  .then((data) => data.json())
+  .then((obj) => {
+    console.log(obj);
+  });
+
+var location = [
   {
     name: "무등산 주상절리대",
     Latitude: 35.1200598333,
@@ -59,7 +66,7 @@ var positions = [
     longitude: 126.9692640546,
   },
 ];
-
+// console.log(location);
 // 마커 이미지의 이미지 주소입니다
 // var imageSrc =
 //   "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
@@ -84,9 +91,3 @@ for (var i = 0; i < positions.length; i++) {
     image: markerImage, // 마커 이미지
   });
 }
-
-fetch("./data/광주_관광지_데이터.json")
-  .then((data) => data.json())
-  .then((obj) => {
-    console.log(obj);
-  });
