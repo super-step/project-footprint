@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  let slidercontainer = document.querySelector(".main_tabs .main_items");
   const gj_map = document.querySelector("area[title='gj_map']");
   const jn_map = document.querySelector("area[title='jn_map']");
   const gj_img = document.querySelector(".map_container img[id='map_gj']");
@@ -14,5 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   jn_map.addEventListener("mouseout", () => {
     jn_img.style.opacity = 0.5;
+  });
+  jn_map.addEventListener("click", () => {
+    slidercontainer.style.left = -100%
   });
 });

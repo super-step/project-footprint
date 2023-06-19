@@ -22,11 +22,27 @@ article {
   margin: 11em auto;
 }
 .main_to_map img {
-  /* margin-top: 5rem; */
-  width: 60px;
+  margin-top: 4rem;
+  width: 65px;
   cursor: pointer;
   -webkit-filter: brightness(0) invert(1);
   filter: brightness(0) invert(1);
+  transition: 0.2s;
+  animation-duration: 1 s;
+  animation-name: toBottom;
+  animation-iteration-count: infinite;
+}
+
+@keyframes toBottom {
+  0% {
+  }
+  100% {
+    width: 70px;
+  }
+}
+.main_to_map img:hover {
+  margin-top: 5rem;
+  width: 70px;
 }
 
 input[name="tabmenu"] {
