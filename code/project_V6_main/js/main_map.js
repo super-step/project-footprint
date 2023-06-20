@@ -1,22 +1,35 @@
+const map = [
+  "gj",
+  "jn",
+  "jb",
+  "gn",
+  "bs",
+  "us",
+  "dg",
+  "gb",
+  "cb",
+  "dj",
+  "sj",
+  "cn",
+  "su",
+  "ic",
+  "gg",
+  "go",
+  "jj",
+];
 document.addEventListener("DOMContentLoaded", () => {
-  let slidercontainer = document.querySelector(".main_tabs .main_items");
-  const gj_map = document.querySelector("area[title='gj_map']");
-  const jn_map = document.querySelector("area[title='jn_map']");
-  const gj_img = document.querySelector(".map_container img[id='map_gj']");
-  const jn_img = document.querySelector(".map_container img[id='map_jn']");
-  gj_map.addEventListener("mouseover", () => {
-    gj_img.style.opacity = 1;
-  });
-  gj_map.addEventListener("mouseout", () => {
-    gj_img.style.opacity = 0.5;
-  });
-  jn_map.addEventListener("mouseover", () => {
-    jn_img.style.opacity = 1;
-  });
-  jn_map.addEventListener("mouseout", () => {
-    jn_img.style.opacity = 0.5;
-  });
-  jn_map.addEventListener("click", () => {
-    slidercontainer.style.left = -100%
-  });
+  for (let area of map) {
+    const img_area = document.querySelector(`area[title='${area}_map']`);
+    const img = document.querySelector(`.map_container img[id='map_${area}']`);
+    const area_tab = document.querySelector(`input[id='${area}_tab']`);
+    img_area.addEventListener("mouseover", () => {
+      img.style.opacity = 1;
+    });
+    img_area.addEventListener("mouseout", () => {
+      img.style.opacity = 0.5;
+    });
+    img_area.addEventListener("click", () => {
+      location.href = "../project_V7_API/index.html";
+    });
+  }
 });
