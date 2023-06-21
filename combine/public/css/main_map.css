@@ -57,7 +57,7 @@ input[name="tabmenu"] {
 }
 .main_items {
   height: 100%;
-  width: 300%;
+  width: 100%;
   transition: 0.5s;
   position: absolute;
   top: 0;
@@ -65,7 +65,7 @@ input[name="tabmenu"] {
 }
 .main_items div.main_item {
   float: left;
-  width: 33.33333%;
+  width: 100%;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -73,7 +73,8 @@ input[name="tabmenu"] {
 }
 .map_whole_img {
   display: inline-block;
-  background-color: rgba(116, 116, 116, 0.267);
+  /* background-color: rgba(116, 116, 116, 0.267);*/
+  background-color: #1d34643f;
 }
 .map_container {
   position: relative;
@@ -178,14 +179,4 @@ input[name="tabmenu"] {
   width: 15.625%;
   top: 76.6%;
   left: 79.6%;
-}
-
-input[id="main_tab"]:checked {
-  left: 0;
-}
-input[id="gj_tab"]:checked {
-  left: -100%;
-}
-input[id="jn_tab"]:checked {
-  left: -200%;
 }
