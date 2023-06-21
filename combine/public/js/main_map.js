@@ -37,11 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
       img.style.opacity = 0.5;
     });
     img_area.addEventListener("click", () => {
-      // fetch(`http://localhost:8000/map/${area}`)
-      //   .then((response) => response.json())
-      //   .then((data) => {
-      //     console.log(area);
-      //   });
+      fetch(`http://localhost:8000/map/${area}`)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(area);
+        });
       // location.href = "../API_map.html";
       location.href = `/map/${area}`;
     });
