@@ -39,6 +39,12 @@
           type="text/javascript"
           src="//dapi.kakao.com/v2/maps/sdk.js?appkey=37962b2a8c893984a4d2139de5dc0061"
         ></script>
+        <script>
+          kakao.maps.event.addListener(marker, "click", () => {
+            // 마커 위에 인포윈도우를 표시합니다
+            alert("hi");
+          });
+        </script>
       </article>
       <article class="API_course">
         <div class="API_course_create">여행코스 생성</div>
@@ -48,6 +54,6 @@
       <p>CopyRight &copy; dbsdudsw@icloud.com</p>
     </footer>
     <script src="./data/gj_map_data.txt" type="text/javascript"></script>
-    <script src="./js/map.js"></script>
+    <script src="./js/API_map.js"></script>
   </body>
 </html>

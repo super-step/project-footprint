@@ -29,6 +29,7 @@ for (var i = 0; i < positions.length; i++) {
       positions[i].longitude
     ), // 마커를 표시할 위치
     image: markerImage, // 마커 이미지
+    clickable: true,
   });
 
   // 마커에 표시할 인포윈도우를 생성합니다
@@ -59,3 +60,7 @@ function makeOutListener(infowindow) {
     infowindow.close();
   };
 }
+kakao.maps.event.addListener(marker, "click", function () {
+  // 마커 위에 인포윈도우를 표시합니다
+  console.log("클릭함");
+});

@@ -15,7 +15,8 @@ div.jn_map_container {
   margin-right: 15rem;
 }
 div.jn_map_container img {
-  position: relative;
+  /* position: relative; */
+  width: 1000px;
   -webkit-filter: brightness(0) invert(1);
   filter: brightness(0) invert(1);
 }

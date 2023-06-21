@@ -59,3 +59,7 @@ function makeOutListener(infowindow) {
     infowindow.close();
   };
 }
+kakao.maps.event.addListener(marker, "click", () => {
+  // 마커 위에 인포윈도우를 표시합니다
+  alert("hi");
+});

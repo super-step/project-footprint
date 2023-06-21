@@ -7,9 +7,11 @@ section {
 article {
   display: block;
   position: static;
+  width: 1200px;
+  height: 700px;
 }
 article.API_nav_container {
-  /* border: 1px dotted #000; */
+  border-top: 2px solid #007996;
   width: 1200px;
   height: 80px;
 }
@@ -20,13 +22,17 @@ article.API_nav_container ul {
 li.API_nav_item {
   top: center;
   list-style: none;
-  margin: 1.5rem 1.7rem;
+  margin: 1.5rem 2rem;
   font-size: 21px;
   font-weight: bold;
   transition: 0.2s;
 }
+li.API_nav_item:last-of-type {
+  color: #e70b35;
+  margin-left: auto;
+}
 li.API_nav_item:hover {
-  color: #26bbaa;
+  color: #007996;
   border-bottom: 2px solid #b1b1b1;
   cursor: pointer;
 }
