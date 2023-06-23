@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/sns.css" />
+    <link rel="stylesheet" href="../css/sns_upload.css" />
     <title>여행발자국</title>
   </head>
   <body>
     <header>
-      <img src="image\footprint\발자국_simple.png" alt="" />
+      <img src="../image/logo_footprint.png" alt="" />
       <div class="cyy_ham_container">
         <input type="checkbox" id="cyy_ham_trigger" />
         <label for="cyy_ham_trigger">
@@ -44,40 +45,38 @@
           ></script>
         </div>
         <div class="sns_contents">
-          <div class="sns_post">
-            <div class="sns_post_pic">
-              <img src="../image/그림1.jpg" alt="" />
+          <div class="upload_header_box">글쓰기</div>
+          <form id="upload_form">
+            <div id="upload_img_container">
+              <label id="upload_img"
+                ><img src="../image/img_book_none.png" alt=""
+              /></label>
+              <input
+                type="file"
+                class="real-upload"
+                accept="image/*"
+                required
+                multiple
+              />
             </div>
-            <div class="sns_post_profile">
-              <img src="../image/그림1.jpg" alt="" />
+            <div id="upload_title">
+              <label>title</label>
+              <input type="text" id="password" name="password" />
             </div>
-            <div class="sns_post_title">
-              <h1>맛있는 수박</h1>
+            <div id="upload_contents">
+              <label>contents</label>
+              <textarea
+                name=""
+                id=""
+                cols="1"
+                rows="2"
+                maxlength="55"
+              ></textarea>
             </div>
-            <div class="sns_post_time"></div>
-            <div class="sns_post_heart"></div>
-            <div class="sns_post_comment"></div>
-            <div class="sns_post_share"></div>
-          </div>
-          <div class="sns_post">
-            <div class="sns_post_pic">
-              <img src="../image/background_img.jpg" alt="" />
+            <div id="upload_btn_container">
+              <button type="button" id="upload_btn">UPLOAD</button>
             </div>
-            <div class="sns_post_profile">
-              <img src="../image/background_img.jpg" alt="" />
-            </div>
-            <div class="sns_post_title">
-              <h1>맛있는 수박</h1>
-            </div>
-            <div class="sns_post_time"></div>
-            <div class="sns_post_heart"></div>
-            <div class="sns_post_comment"></div>
-            <div class="sns_post_share"></div>
-          </div>
-          <div class="sns_post"></div>
-          <div class="sns_post"></div>
-          <div class="sns_post"></div>
-          <div class="sns_post"></div>
+          </form>
         </div>
       </article>
     </section>
