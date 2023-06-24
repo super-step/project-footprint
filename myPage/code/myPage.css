@@ -1,75 +1,71 @@
 article {
   position: inherit;
-  height: 800px;
+  height: 95%;
   width: 1200px;
+  width: 70%;
   text-align: center;
-  border: 1px solid #000;
-  background-color: #ffffff;
+  background-color: #ffffffee;
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
 }
 article div {
-  /* border: 1px solid #000; */
+  font-weight: 800;
 }
 div.myPageHeader {
-  /* border: 1px solid blue; */
   width: 100%;
   height: 15%;
   text-align: left;
   font-size: 50px;
-  font-weight: 500;
+  font-weight: 800;
   padding: 25px 0 0px 50px;
-  /* border-bottom: 1px solid #000; */
-  background-color: #3e8388;
+  border-bottom: 5px solid #00000044;
+  color: #26bbaa;
+  text-shadow: -1px 0px #007996, 0px 1px #007996, 1px 0px #007996,
+    0px -1px #007996;
 }
 div.myPageBody {
-  /* border: 1px solid red; */
   width: 100%;
   height: 85%;
   display: flex;
   flex-direction: row;
-  /* background-color: #b3a0a01c; */
+  padding: 20px;
 }
 div.myPageList {
   width: 25%;
   height: 100%;
-  background-color: #6b4040;
 }
 div.myPageContent {
-  background-color: #584683;
   width: 75%;
   height: 100%;
 }
 div.myPageUserProfile {
   display: block;
-  padding-top: 10px;
-  background-color: #fff;
+  padding-top: 20px;
   width: 100%;
-  height: 40%;
+  height: 45%;
 }
 div.myPageUserHeart {
-  padding-top: 60px;
-  background-color: #f9ffab;
   width: 100%;
-  height: 60%;
+  height: 55%;
+  padding-bottom: 40px;
 }
 div.myPageSetting {
-  background-color: #c29393;
   width: 100%;
-  height: 50%;
+  height: 30%;
 }
 div.myPagePost {
-  background-color: #8cb185;
   width: 100%;
-  height: 50%;
+  height: 70%;
 }
 div.mPProfileImg {
   border: 1px solid #000;
-  width: 80%;
-  height: 80%;
+  width: 170px;
+  height: 170px;
   overflow: hidden;
   border-radius: 50%;
   margin: 0 auto;
+  margin-top: a;
   display: flex;
   object-fit: cover;
 }
@@ -80,17 +76,100 @@ div.mPProfileImg img {
 }
 div.mPProfileName {
   margin-top: 10px;
-  border: 1px solid #000;
   font-size: 20px;
 }
+div.mPProfileLogout {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 2px 4px;
+  border-radius: 10px;
+  background-color: #f08684;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+}
+div.myPageUserHeart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
 div.myPageUserHeart #MyALLheart {
-  margin-bottom: 70px;
-  border: 1px solid #4b4b4b;
   height: 15%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 div.myPageUserHeart #MyALLheart img {
-  margin-left: 20px;
   width: auto;
-  height: 100%;
+  height: 40%;
+}
+div.mPLikeTitle {
+  width: 50%;
+  text-align: left;
+  padding-left: 20px;
+}
+div.mPLikeCount {
+  width: 30%;
+  text-align: right;
+  padding-right: 20px;
+}
+div.mPLikeCount span {
+  content: "3";
+}
+
+div.myPageContent,
+div.myPagePost {
+  display: flex;
+  flex-direction: column;
+}
+
+div.mPContentTitle {
+  margin-top: 20px;
+  padding-left: 10%;
+  font-size: 30px;
+  height: 50px;
+  text-align: left;
+}
+div.mPContentBox {
+  display: flex;
+  width: 85%;
+  height: 80px;
+  margin: 10px auto;
+  padding: 5px;
+  justify-content: space-evenly;
+  border-radius: 30px;
+  background-color: #faf4c0;
+}
+div.mPContentBox div {
+  font-size: 20px;
+}
+div.mPNicSet,
+div.mPPWSet,
+div.mPContentBox {
+  display: flex;
+  align-items: center;
+}
+div.mPNicSet {
+  border-right: 1px solid #000;
+  width: 55%;
+}
+div.mPPWSet {
+  width: 40%;
+}
+div.mPNicSet div:first-child,
+div.mPPWSet div:first-child {
+  margin: 0 15px;
+}
+
+div.mPNicSet div.mPNicChange,
+div.mPPWSet div.mPPWChange,
+div.mPContentBox div.mPPostManage {
+  font-size: 18px;
+  margin-left: 30px;
+  padding: 3px 10px;
+  border-radius: 10px;
+  background-color: #f08684;
+  color: #fff;
+  cursor: pointer;
 }
