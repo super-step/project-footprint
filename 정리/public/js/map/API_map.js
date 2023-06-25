@@ -5,7 +5,8 @@ console.log(snsCotents);
 /* 넘어온 지역명으로 area 셋팅 */
 const urlParams = new URLSearchParams(window.location.search);
 let paramName = urlParams.get("name");
-console.log(paramName);
+let paramType = urlParams.get("type");
+console.log(paramType);
 let area;
 arrCenter.forEach((element) => {
   if (element.name == paramName) {
@@ -13,6 +14,7 @@ arrCenter.forEach((element) => {
     return false;
   }
 });
+console.log(area);
 
 /* area 좌표와 확대값으로 해당 지역을 센터로 표시 */
 var options = {
@@ -33,12 +35,13 @@ var map = new kakao.maps.Map(container, options);
 
 // 마커 좌표 데이터 로드
 let positions;
-console.log(positions);
+
 if (paramName == "gj") {
   positions = JSON.parse(JSON.stringify(TestFile)).gj;
 } else if (paramName == "Yeosu") {
   positions = JSON.parse(JSON.stringify(TestFile)).Yeosu;
 }
+console.log(positions);
 // 마커 이미지의 이미지 주소입니다
 var imageSrc =
   "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
@@ -46,11 +49,11 @@ var imageSrc =
 let makers = []; // 마커 리스트
 let customOverlays = []; // 커스텀 오버레이 리스트
 for (var i = 0; i < positions.length; i++) {
-  if (markerType == "0") {
-    console.log(markerType);
-    console.log(positions[i].type);
-  } else if (markerType != positions[i].type) {
-    console.log(markerType);
+  if (paramType == "0") {
+    console.log(paramType);
+    console.log(positions[i]);
+  } else if (paramType != positions[i].type) {
+    console.log(paramType);
     continue;
   }
   // 마커 이미지의 이미지 크기 입니다
