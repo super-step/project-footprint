@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     img_area.addEventListener("click", () => {
       if (area.name == "gj" || area.name == "jn") {
         if (area.deepLv == 1) {
-          location.replace(`./API_map.html?name=${area.name}`);
+          location.replace(`./API_map.html?name=${area.name}&type=0`);
         } else if (area.deepLv == 2) {
           location.href = `./map_${area.name}.html`;
         }

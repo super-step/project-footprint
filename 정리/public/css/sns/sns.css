@@ -42,7 +42,7 @@ article.sns_container {
   height: 700px;
   display: flex;
 }
-div.sns_map,
+div.API_map,
 div.sns_contents {
   background-color: #ffffff46;
   /* border: 1px solid #000; */

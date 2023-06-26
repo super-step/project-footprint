@@ -20,12 +20,35 @@
 // // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
 // // marker.setMap(null);
 
-var container = document.querySelector(".sns_map");
+var container = document.querySelector(".API_map");
+
+let snsCotents = JSON.parse(sessionStorage.getItem("snsCotents")); // 글 스토리지 불러오기
+console.log(snsCotents);
+/* 넘어온 지역명으로 area 셋팅 */
+const urlParams = new URLSearchParams(window.location.search);
+let paramName = urlParams.get("name");
+let paramType = urlParams.get("type");
+console.log(paramType);
+let area;
+arrCenter.forEach((element) => {
+  if (element.name == paramName) {
+    area = element;
+    return false;
+  }
+});
+console.log(area);
+
+/* area 좌표와 확대값으로 해당 지역을 센터로 표시 */
 var options = {
-  center: new kakao.maps.LatLng(35.16, 126.8512),
+  center: new kakao.maps.LatLng(area.Latitude, area.longitude),
   level: 3,
 };
+// var options = {
+//   center: new kakao.maps.LatLng(35.16, 126.8512),
+//   level: 3,
+// };
 
+// 지도 띄우기
 var map = new kakao.maps.Map(container, options);
 
 let positions = JSON.parse(JSON.stringify(TestFile)).gj;

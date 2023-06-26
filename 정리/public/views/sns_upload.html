@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/sns.css" />
-    <link rel="stylesheet" href="../css/sns_upload.css" />
+    <link rel="stylesheet" href="../css/sns/sns.css" />
+    <link rel="stylesheet" href="../css/sns/sns_upload.css" />
+    <script src="../js/map/API_main.js"></script>
     <title>여행발자국</title>
   </head>
   <body>
@@ -39,7 +40,7 @@
         </ul>
       </article>
       <article class="sns_container">
-        <div class="sns_map" id="sns_api_map" width="580px">
+        <div class="API_map" id="sns_api_map" width="580px">
           <script
             type="text/javascript"
             src="//dapi.kakao.com/v2/maps/sdk.js?appkey=37962b2a8c893984a4d2139de5dc0061"
@@ -84,7 +85,9 @@
     <footer>
       <p>CopyRight &copy; dbsdudsw@icloud.com</p>
     </footer>
-    <script src="../data/gj_map_data.txt" type="text/javascript"></script>
+
+    <script src="../data/marker_data.txt" type="text/javascript"></script>
+    <script src="../js/map/API_map.js"></script>
     <script src="../js/map.js"></script>
   </body>
 </html>
