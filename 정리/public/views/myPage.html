@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/mypage/myPage.css" />
+    <link rel="stylesheet" href="../css/mypage/myPageModal.css" />
     <script src="../js/main.js"></script>
     <title>여행발자국</title>
   </head>
@@ -67,7 +68,7 @@
               <div class="mPContentBox">
                 <div class="mPNicSet">
                   <div>닉네임 :</div>
-                  <div class="mPNowNic">사료 싫어하는 고양이</div>
+                  <label class="mPNowNic">사료 싫어하는 고양이</label>
                   <div class="mPNicChange mPBtn">변경하기</div>
                 </div>
                 <div class="mPPWSet">
@@ -90,11 +91,28 @@
             </div>
           </div>
         </div>
+        <div id="modal" class="modal-overlay">
+          <div class="modal-window">
+            <div class="my_modal_header">
+              <div class="my_modal_title">
+                <h2>닉네임 변경</h2>
+              </div>
+              <div class="my_modal_close_area">X</div>
+            </div>
+            <div class="my_modal_content">
+              <form action="">
+                <input name="myChangeValue" type="text" />
+                <button id="my_modal_change_btn">변경하기</button>
+              </form>
+            </div>
+          </div>
+        </div>
       </article>
     </section>
     <footer>
       <p>CopyRight &copy; dbsdudsw@icloud.com</p>
     </footer>
     <script src="../js/mypage/myPage.js"></script>
+    <script src="../js/mypage/myPageModal.js"></script>
   </body>
 </html>

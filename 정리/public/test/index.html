@@ -29,7 +29,7 @@
         border-radius: 10px;
         border: 1px solid rgba(255, 255, 255, 0.18);
         width: 400px;
-        height: 500px;
+        height: 100px;
         position: relative;
         top: -100px;
         padding: 10px;
@@ -57,6 +57,8 @@
         padding: 0px 10px;
         text-shadow: 1px 1px 2px gray;
         color: white;
+        display: flex;
+        justify-content: center;
       }
     </style>
   </head>
@@ -73,8 +75,10 @@
         </div>
         <div class="close-area">X</div>
         <div class="content">
-          <input name="myNicChange" type="text" />
-          <button id="myNicChange"></button>
+          <form action="">
+            <input name="myChangeNic" type="text" />
+            <button>변경하기</button>
+          </form>
         </div>
       </div>
     </div>
