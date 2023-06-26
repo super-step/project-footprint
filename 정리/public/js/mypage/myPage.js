@@ -4,9 +4,13 @@ let myNicChange = document.querySelector(".mPNicChange");
 let myLogout = document.querySelector(".mPProfileLogout");
 let myPWChange = document.querySelector(".mPPWChange");
 let modalValueChange = document.querySelector("#my_modal_change_btn");
-let like1 = document.querySelector(".mPLikeTitle:");
+let mPReceivedLike = document.querySelector("span#mPReceivedLike");
+let mPMostHeart = document.querySelector("span#mPMostHeart");
+let mPPostNumber = document.querySelector("span#mPPostNumber");
+let mPPostManage = document.querySelector("div.mPPostManage");
 
 let member = JSON.parse(sessionStorage.getItem("member"));
+let snsCotents = JSON.parse(sessionStorage.getItem("snsCotents"));
 const sessionUser = JSON.parse(sessionStorage.getItem("user"));
 myName.innerHTML = `${sessionUser.name}`;
 console.log(sessionUser.nick);
@@ -25,7 +29,7 @@ myNicChange.addEventListener("click", () => {
     sessionUser.nick = myChangeValue;
     console.log(sessionUser.nick);
 
-    alert(`변경되었습니다.${myChangeValue}`);
+    // alert(`변경되었습니다.${myChangeValue}`);
 
     sessionStorage.setItem("user", JSON.stringify(sessionUser));
   });
@@ -48,10 +52,33 @@ myPWChange.addEventListener("click", () => {
     sessionUser.password = myChangeValue;
     console.log(sessionUser.password);
 
-    alert(`변경되었습니다.${sessionUser.password}`);
+    // alert(`변경되었습니다.${sessionUser.password}`);
 
     sessionStorage.setItem("user", JSON.stringify(sessionUser));
   });
+});
+let nowHeart = 0;
+let mostHeart = 0;
+let nowPostNumber = 0;
+snsCotents.forEach((element) => {
+  console.log(element.UserId);
+  console.log(element.heart);
+  if (element.userId == sessionUser.id) {
+    nowHeart = nowHeart + element.heart;
+    if (element.heart > mostHeart) {
+      mostHeart = element.heart;
+    }
+    nowPostNumber = nowPostNumber + 1;
+  }
+  console.log(nowHeart);
+});
+mPReceivedLike.innerHTML = nowHeart;
+mPMostHeart.innerHTML = mostHeart;
+mPPostNumber.innerHTML = nowPostNumber;
+
+mPPostManage.addEventListener("click", () => {
+  location.href = "./myPage_PostManage.html";
+  console.log("글관리버튼누름");
 });
 
 // modalValueChange.addEventListener("click", () => {
