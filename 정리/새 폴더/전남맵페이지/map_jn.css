@@ -1,0 +1,133 @@
+article {
+  position: inherit;
+  height: 100%;
+  width: 100%;
+
+  text-align: center;
+
+  /* border: 1px solid #000; */
+  background-color: #1d34643f;
+}
+div.jn_map_container {
+  /* border: 1px solid red; */
+
+  margin: 5rem auto;
+  margin-right: 15rem;
+}
+div.jn_map_container img {
+  /* position: relative; */
+  width: 1000px;
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+.jn_map_container a {
+  position: absolute;
+  /* border: 1px solid #000; */
+  text-shadow: -1.5px 0px black, 0px 1.5px black, 1.5px 0px black,
+    0px -1.5px black;
+  color: rgb(255, 255, 255);
+  left: 0;
+  top: 0;
+  font-size: 20px;
+  font-weight: 900;
+  transition: 0.2s;
+}
+
+a#Damyang {
+  top: 23%;
+  left: 50.5%;
+}
+a#Jangseong {
+  top: 21%;
+  left: 47%;
+}
+a#Yeonggwang {
+  top: 24%;
+  left: 41.2%;
+}
+a#Hampyeong {
+  top: 31%;
+  left: 42.2%;
+}
+a#Naju {
+  top: 37%;
+  left: 46%;
+}
+a#Hwasun {
+  top: 37%;
+  left: 51%;
+}
+a#Gokseong {
+  top: 25%;
+  left: 55.3%;
+}
+a#Gurye {
+  top: 25%;
+  left: 59.9%;
+}
+a#Suncheon {
+  top: 37.5%;
+  left: 57.8%;
+}
+a#Gwangyang {
+  top: 36.8%;
+  left: 62.7%;
+}
+a#Yeosu {
+  color: #f08684;
+  top: 47%;
+  left: 62.7%;
+}
+a#Goheung {
+  top: 57%;
+  left: 56%;
+}
+a#Boseong {
+  top: 46%;
+  left: 53.5%;
+}
+a#Jangheung {
+  top: 53%;
+  left: 49.5%;
+}
+a#Gangjin {
+  top: 55%;
+  left: 46.8%;
+}
+a#Haenam {
+  top: 57%;
+  left: 42%;
+}
+a#Yeongam {
+  top: 47%;
+  left: 44%;
+}
+a#Muan {
+  top: 40%;
+  left: 41%;
+}
+a#Mokpo {
+  top: 35%;
+  left: 38%;
+}
+a#Sinan {
+  top: 44%;
+  left: 34%;
+}
+a#Jindo {
+  top: 62.5%;
+  left: 37.3%;
+}
+a#Wando {
+  top: 70%;
+  left: 45.3%;
+}
+a#Damyang {
+  top: 22.5%;
+  left: 50.5%;
+}
+.jn_map_container a:hover {
+  text-shadow: -1px 0px #faf4c0, 0px 1px #faf4c0, 1px 0px #faf4c0,
+    0px -1px #faf4c0;
+  color: #007996;
+}
