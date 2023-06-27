@@ -40,6 +40,7 @@ img.mPPostImg {
   /* border: 1px solid #000; */
   margin-right: 10px;
   font-size: 20px;
+  /* border: 1px solid #000; */
 }
 .mPPostHeart img {
   margin-top: 2px;
@@ -47,8 +48,16 @@ img.mPPostImg {
   height: 25px;
 }
 .mPPostTitle {
-  margin-top: 3px;
+  margin-top: 10px;
   height: 35px;
   /* border: 1px solid #000; */
   overflow: auto;
+}
+.mPPostTitlebox {
+  display: flex;
+  justify-content: space-between;
+}
+.mPPostMapTitle {
+  margin-left: 15px;
+  padding-left: 10px;
 }
