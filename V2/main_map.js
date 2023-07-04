@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     const area_tab = document.querySelector(`input[id='${area.name}_tab']`);
     img_area.addEventListener("mouseover", () => {
-      img.style.opacity = 1;
+      img.style.opacity = 0;
     });
     img_area.addEventListener("mouseout", () => {
       img.style.opacity = 0.5;

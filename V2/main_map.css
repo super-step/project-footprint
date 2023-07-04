@@ -181,3 +181,10 @@ input[name="tabmenu"] {
   top: 76.6%;
   left: 79.6%;
 }
+.c1 {
+  background-color: green;
+}
+
+.c2 {
+  width: 300px;
+}
